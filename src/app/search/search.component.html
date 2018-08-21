@@ -1,0 +1,27 @@
+<mat-card>
+	<mat-card-content>
+		<h2 class="example-h2">What would you like to do?</h2>
+		<mat-tab-group class="demo-tab-group">
+			<mat-tab label="Search">
+				<div class="demo-tab-content">
+					<mat-form-field class="example-full-width">
+						<input (input)="onSearchInput($event)" matInput placeholder="Search for a song">
+					</mat-form-field>
+					<audio *ngIf="songToPlay" src="{{songToPlay}}" autoplay></audio>
+					<div class="results-container">
+            <!-- Code Scavenger Hunt 11: for each search result, we need to display a favorite card for it. Add the property and event bindings for this component which you completed in step #5 in SongCardComponent-->
+						<app-song-card *ngFor="let result of searchResults"></app-song-card>
+					</div>
+				</div>
+			</mat-tab>
+			<mat-tab label="View Favorites">
+				<div class="demo-tab-content">
+					<div class="results-container">
+            <!-- Code Scavenger Hunt 12: Same as step #11-->
+						<app-song-card *ngFor="let favorite of favorites"></app-song-card>
+					</div>
+				</div>
+			</mat-tab>
+		</mat-tab-group>
+	</mat-card-content>
+</mat-card>

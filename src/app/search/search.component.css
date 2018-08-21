@@ -1,0 +1,21 @@
+.demo-tab-group {
+  border: 1px solid #e8e8e8;
+}
+
+.demo-tab-content {
+  padding: 16px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.results-container {
+  /* Code Scavenger Hunt #10: Let's make this a flex container with wrapping behavior */
+}

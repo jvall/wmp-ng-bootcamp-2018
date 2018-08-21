@@ -1,0 +1,18 @@
+<mat-card>
+  <img mat-card-image src="{{coverImg}}" alt="{{artist}}">
+  <mat-card-content>
+    <p>
+      {{name}}
+    </p>
+    <p>
+      {{artist}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <!-- 
+      Code Scavenger Hunt #8: add your onClick event bindings here for calling playing a song and favoriting a song
+    -->
+    <button mat-button>PLAY</button>
+    <button mat-button [disabled]="isFavorited">{{isFavorited ? 'Favorited' : 'Favorite'}}</button>
+  </mat-card-actions>
+</mat-card>
